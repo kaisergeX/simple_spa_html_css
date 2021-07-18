@@ -25,14 +25,14 @@ const handleActiveNav = currIndex => {
 };
 
 /**
- * Fetch corresponding component asynchronously.
- *
- * @note It's not necessary to use 'async await' here, if those source files are fetched "locally".
+ * Fetch corresponding component asynchronously from the html file with the paths,
+ * declared on the dataset attr. in the navbar (stored in navDirect).
  *
  * @param {Object} component dataset DOM map of the target component.
  * @param {int} currIndex target index of components base on the index its stored on "componentSrcList".
  */
 const loadComponent = async (component, currIndex) => {
+  if (!component?.src) return;
   const target = document.getElementById("app");
   target.innerHTML = await (await fetch(component.src)).text();
   if (component.title) document.title = component.title;
@@ -55,7 +55,7 @@ const SPASimulator = () => {
 };
 
 const toHomePage = () => {
-  loadComponent(arrayNavDirect[0].dataset, 0);
+  loadComponent(arrayNavDirect[0]?.dataset, 0);
 };
 
 /**
@@ -78,4 +78,4 @@ const changeTheme = () => {
 SPASimulator();
 
 // Component no.0 is mounted by default.
-loadComponent(arrayNavDirect[0].dataset, 0);
+loadComponent(arrayNavDirect[0]?.dataset, 0);
