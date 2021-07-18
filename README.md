@@ -8,6 +8,11 @@ This app requires a local server to load CSS, script files and internet connecti
 
 We need to be serving the index.html file locally or have a hosted on a live server somewhere for the Fetch API to work properly. The files need to be served using the http or https protocols.
 
+> **Other option?**
+
+Yes! You can clone this repo.: [this project but setup for deploy](https://github.com/kaisergeX/simple_spa_html_css_deploy) if LTS version of NodeJS, npm/yarn is already installed on your PC.
+
+
 # Installation
 I recommend using [Visual Studio Code](https://code.visualstudio.com/download) with [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extensions. Then, open root html file (index.html) by VSCode and click `Go Live` (see image below). Live Server will open this app on a port of your localhost.
 
