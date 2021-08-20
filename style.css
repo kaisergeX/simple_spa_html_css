@@ -4,11 +4,13 @@
 @import "./material.css";
 @import "./blog/blog.css";
 @import "./gallery/gallery.css";
+@import "./map/map.css";
 
 body {
   padding: 0;
   margin: 0;
-  font-family: "Nunito", "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Ubuntu", "Droid Sans", sans-serif;
+  font-family: "Nunito", "Open Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Ubuntu", "Droid Sans", sans-serif;
   box-sizing: border-box;
 
   --primary-color: #bbdefb;
